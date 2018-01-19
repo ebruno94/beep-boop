@@ -7,13 +7,16 @@ function isException(number){
   }
 };
 
-function isSentence(sentence){
-  if (parseInt(sentence) === NaN){
-    return true;
-  } else {
-    return false;
+function containsPunctuation(sentence){
+  var punctuations = ["!",",","."];
+  var boolFlag = false;
+  for (var index = 0; index < punctuations.length; index++){
+    if (sentence.includes(punctuations[index])){
+      boolFlag = true;
+    };
   }
-  };
+  return boolFlag;
+};
 
 function analyze(number, name){
   var arrayNums = number.split("");
@@ -38,7 +41,7 @@ function analyze(number, name){
 };
 
 function reverse(analyzedResult){
-  if (isSentence(analyzedResult)){
+  if (containsPunctuation(analyzedResult)){
     return analyzedResult;
   } else {
     var newString = "";
