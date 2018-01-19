@@ -25,7 +25,7 @@ A website / program that lets users interact with a robot that responds with "Be
 
 OR
 
-1. Visit https://ebruno94.github.io/beep-boop.html to see the website!
+1. Visit https://ebruno94.github.io/beep-boop to see the website!
 
 ## Known Bugs
 
