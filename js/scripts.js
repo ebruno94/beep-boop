@@ -58,12 +58,18 @@ $(document).ready(function(){
   var userName = "";
   var userNum = "";
   var result = "";
+  $("#start").click(function(event){
+    event.preventDefault();
+    $(".jumbotron").hide("ease");
+    $("#formJumbo").show("ease");
+  })
   $("#form").submit(function(event){
     userName = $("input#name").val();
     userNum = $("input#number").val();
     event.preventDefault();
     result = analyze(userNum, userName);
-    $("#resultWindow").show();
+    $("#form").hide("ease");
+    $("#resultWindow").show("ease");
     $("#result").text(result);
   });
   $("#reverse").click(function(event){
@@ -71,4 +77,9 @@ $(document).ready(function(){
     result = reverse(analyze(userNum, userName));
     $("#result").text(result);
   });
+  $("#return").click(function(event){
+    event.preventDefault();
+    $("#form").show("ease");
+    $("#resultWindow").hide("ease");
+  })
 });
