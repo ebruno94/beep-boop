@@ -1,6 +1,7 @@
 body{
   font-family: monospace;
-  background-color: navy;
+  background-image: url("../img/robotbg.jpg");
+  background-color: #cccccc;
   padding: 80px;
 }
 
@@ -17,15 +18,16 @@ label{
 }
 
 .container{
-  padding: 10px;
-  border: 20px;
-  background-color: white;
+  padding: 5px;
+  border: 0px;
+  background-color: #0d1a23;
 }
+
 .jumbotron{
   text-align: center;
   padding: 150px;
   padding-bottom: 125px;
-  margin: 50px;
+  margin: 15px;
 }
 
 #resultWindow{
