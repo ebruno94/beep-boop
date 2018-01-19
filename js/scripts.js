@@ -39,6 +39,7 @@ $(document).ready(function(){
     var userName = $("input#name").val();
     var userNum = $("input#number").val();
     var result = analyze(userNum, userName);
-    $("#result").text(result);
+    $("#resultWindow").show();
+    $(".result").text(result);
   });
 });
