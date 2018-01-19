@@ -5,12 +5,18 @@ function isException(number){
   } else {
     return false;
   }
-}
+};
+
+function isSentence(sentence){
+  if (parseInt(sentence) === NaN){
+    return true;
+  } else {
+    return false;
+  }
+  };
 
 function analyze(number, name){
   var arrayNums = number.split("");
-  console.log(arrayNums);
-  console.log(number);
   var result = "";
   if ((number % 3 === 0) && (number !== "0")){
     return "I'm sorry, " + name + ". I'm afraid I can't do that.";
@@ -31,15 +37,35 @@ function analyze(number, name){
   }
 };
 
+function reverse(analyzedResult){
+  if (isSentence(analyzedResult)){
+    return analyzedResult;
+  } else {
+    var newString = "";
+    for (var i = analyzedResult.length - 1; i >= 0; i-- ){
+      newString += analyzedResult[i];
+    }
+    return newString;
+  }
+};
+
 
 // UI
 $(document).ready(function(){
+  var userName = "";
+  var userNum = "";
+  var result = "";
   $("#form").submit(function(event){
+    userName = $("input#name").val();
+    userNum = $("input#number").val();
     event.preventDefault();
-    var userName = $("input#name").val();
-    var userNum = $("input#number").val();
-    var result = analyze(userNum, userName);
+    result = analyze(userNum, userName);
     $("#resultWindow").show();
-    $(".result").text(result);
+    $("#result").text(result);
+  });
+  $("#reverse").click(function(event){
+    event.preventDefault();
+    result = reverse(analyze(userNum, userName));
+    $("#result").text(result);
   });
 });
