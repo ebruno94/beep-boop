@@ -11,26 +11,40 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>~BEEP BOOP~</h1>
+        <h1>BEEP BOOP</h1>
+        <h3>A simple program by Ernest Bruno</h3>
+        <hr>
+        <br><br><br>
+        <div style="center">
+        <button id="start" class="btn btn-default"> Begin </button>
+        </div>
       </div>
-      <form id="form">
-        <div class="form-group">
-          <label for="name">What is your name?</label>
-          <input id="name" class="form-control" type="text">
+      <div class="jumbotron" id="formJumbo">
+        <form id="form">
+          <h4>Let's Begin!</h4>
+          <hr>
+          <br><br>
+          <div class="form-group">
+            <label for="name">What is your name?</label>
+            <input id="name" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="number">Enter a number (or numbers)!</label>
+            <input id="number" class="form-control" type="text">
+          </div>
+          <br><br><br>
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+        </form>
+          <div id="resultWindow">
+            <h2 > Result: </h2> <hr><br><br><br><br><br>
+            <p><span id="result"></span></p> <br><br><br><br><br>
+            <button id="reverse" type="button" class="btn btn-default">Reverse</button>
+            <button id="return" type="button" class="btn btn-default">Return</button>
+            <br><br>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="number">Enter a number!</label>
-          <input id="number" class="form-control" type="text">
-        </div>
-        <button type="submit" class="btn btn-info">Submit</button>
-      </form>
-      <br>
-      <br>
-      <br>
-      <div id="resultWindow">
-        <h4>Result:</h4>
-        <p><span id="result"></span></p> <br><br>
-        <button id="reverse" type="button" class="btn btn-info">Reverse</button>
       </div>
     </div>
   </body>
